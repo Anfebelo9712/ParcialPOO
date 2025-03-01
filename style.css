@@ -1,4 +1,11 @@
 #map{
-    height: 800;
+    height: 100%;
+    width: 100%;
+}
+#butoncontainers{
+    position: relativa;
+    top: 20px;
+    left: 100px;
+    z-index: 1000;
 
 }
