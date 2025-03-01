@@ -13,7 +13,9 @@ async function loadPolygon (){
     L.geoJSON(myPolygon,
         {
             style:{
-                color:'red'
+                color:'white',
+                fillColor: "blue",
+                fillOpacity: 0.1,
             }
         }
     ).addTo(map);
@@ -40,7 +42,7 @@ btnTrees.addEventListener('click',
                         fillColor:'green',
                         weight:1,
                         opacity:1,
-                        fillOpacity: 0.5,
+                        fillOpacity: 0.8,
                     })
 
                 }
@@ -103,3 +105,32 @@ function  generatePDF(distances, totalTrees){
     documentPDF.save("PardoRubio.pdf")
 
 }
+
+
+let btnSiniestros = document.getElementById("btnSiniestros");
+
+btnSiniestros.addEventListener('click', 
+    async function(){
+        let response = await fetch("historico_siniestros_pardorubio.geojson");
+        let datos = (await response.json());
+        //Agregar la capa al mapa
+        L.geoJSON(
+            datos,
+            {
+                pointToLayer: (feature, latlong)=>{
+
+                    return L.circleMarker(latlong, {
+                        radius:3,
+                        fillColor:'red',
+                        weight:1,
+                        opacity:0,
+                        fillOpacity: 0.5,
+                    })
+
+                }
+            }
+        ).addTo(map);
+
+    }
+    
+)

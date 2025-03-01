@@ -33,5 +33,9 @@ Creae el BBox de mi barrio
 # Problema 8 
 Descargar los datos filtrados desde la API (Servicio REST) con phyton. 
 
+# Problema 9
+buscar el geojson de los incidentes en mi barrio
+
+
 
 
