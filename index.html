@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +15,13 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
 
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="style.css">
-
     <!-- Librerías adicionales -->
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -36,15 +36,21 @@
         </div>
     </section>
 
-    <!-- Sección del mapa y los botones -->
+    <!-- Sección del primer mapa con botones -->
     <section id="map-section">
+        <h2>Mapa interactivo con capas</h2>
         <div id="btncontainer">
             <button class="buttons" id="btnTrees">Árboles</button>
             <button class="buttons" id="btnDistance">Distancias</button>
             <button class="buttons" id="btnSiniestros">Siniestros</button>
         </div>
-
         <div id="map"></div> 
+    </section>
+
+    <!-- Sección del segundo mapa solo con el polígono -->
+    <section id="map-section-2">
+        <h2>Mapa de localidad chapinero</h2>
+        <div id="map2"></div> 
     </section>
 
     <!-- Script principal -->
@@ -52,3 +58,4 @@
 
 </body>
 </html>
+

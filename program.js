@@ -134,3 +134,22 @@ btnSiniestros.addEventListener('click',
     }
     
 )
+
+// 📌 MAPA 2: Muestra el polígono de CHAPINERO
+setTimeout(() => {
+    var map2 = L.map('map2').setView([4.648283, -74.06208], 14); // Centrado en Chapinero
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap'
+    }).addTo(map2);
+
+    async function loadChapinero() {
+        let myData = await fetch('chapinero.geojson'); // 📌 Aquí cambiamos el archivo
+        let myPolygon = await myData.json();
+        L.geoJSON(myPolygon, {
+            style: { color: 'red', fillColor: "orange", fillOpacity: 0.3 } // Diferente estilo
+        }).addTo(map2);
+    }
+    loadChapinero();
+}, 500);
