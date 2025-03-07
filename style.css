@@ -1,18 +1,54 @@
-#map{
-    height: 100%;
+/* Sección de imagen con texto sobre ella */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta según el tamaño deseado */
+    margin: auto;
 }
-#butoncontainers{
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Caja de texto sobre la imagen */
+.image-text {
     position: absolute;
-    top: 10px;
-    left: 100px;
-    z-index: 1000;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
 }
 
-.buttons{
-    background-color: blue;
-    color: white;
-    height: 40px;
-    width: 140px;
-    font-size: 25px;
+.image-text h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.image-text p {
+    margin: 5px 0 0;
+    font-size: 18px;
+}
+
+/* Sección del mapa */
+#map-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#btncontainer {
+    margin-bottom: 10px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }

@@ -1,28 +1,54 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parcial</title>
+
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
-     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
-     <link rel="stylesheet" href="style.css">
-     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-     <div id="btncontainer">
-        <button class="buttons" id="btnTrees">Árboles</button>
-        <button class="buttons" id="btnDistance">Distancias</button>
-        <button class="buttons" id="btnSiniestros">Siniestros</button>
-    </div>
-    
-     
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Librerías adicionales -->
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
-    <div id="map"></div> 
+
+    <!-- Sección de imagen con texto sobre ella -->
+    <section id="info-section">
+        <div class="image-container">
+            <img src="IMG_1391.jpg" alt="Vista de Pardo Rubio">
+            <div class="image-text">
+                <h2>Pardo Rubio</h2>
+                <p>Localidad de Chapinero</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección del mapa y los botones -->
+    <section id="map-section">
+        <div id="btncontainer">
+            <button class="buttons" id="btnTrees">Árboles</button>
+            <button class="buttons" id="btnDistance">Distancias</button>
+            <button class="buttons" id="btnSiniestros">Siniestros</button>
+        </div>
+
+        <div id="map"></div> 
+    </section>
+
+    <!-- Script principal -->
+    <script src="program.js"></script>
+
 </body>
-<script src="program.js"></script>
 </html>
